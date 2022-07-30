@@ -73,10 +73,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //onclick menu option
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.menu_ulangi)
+        if (item.getItemId() == R.id.menu_ulangi) {
+            Toast.makeText(this, "Tombol ulangi diklik", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this, UlangiActivity.class));
-        else if (item.getItemId() == R.id.menu_keluar)
+        }
+        else if(item.getItemId() == R.id.menu_keluar) {
+            Toast.makeText(this, "keluat", Toast.LENGTH_SHORT).show();
             finish();
+        }
         return true;
     }
 
